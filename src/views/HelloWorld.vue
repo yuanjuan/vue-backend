@@ -5,10 +5,21 @@
 </template>
 
 <script>
+import { test } from '@/api/api'
 export default {
   name: 'HelloWorld',
   data () {
     return {
+    }
+  },
+  created () {
+    this.testFun()
+  },
+  methods: {
+    testFun () {
+      test().then(res => {
+        console.log(res)
+      })
     }
   }
 }
