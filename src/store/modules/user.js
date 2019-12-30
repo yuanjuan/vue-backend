@@ -1,6 +1,6 @@
 import { getToken, setToken, removeToken } from '@/utils/auth'
-import { login, getInfo } from '@/api/api'
-// import router, { resetRouter } from '@/router'
+import { login, getInfo, logout } from '@/api/api'
+import { resetRouter } from '@/router'
 
 const state = {
   token: getToken(),
@@ -59,6 +59,20 @@ const actions = {
         commit('SET_AVATAR', avatar)
         commit('SET_NAME', name)
         resolve(data)
+      }).catch(error => {
+        reject(error)
+      })
+    })
+  },
+  // 用户退出
+  logout ({ commit, state }) {
+    return new Promise((resolve, reject) => {
+      logout(state.token).then(() => {
+        commit('SET_TOKEN', '')
+        commit('SET_ROLES', [])
+        removeToken()
+        resetRouter()
+        resolve()
       }).catch(error => {
         reject(error)
       })

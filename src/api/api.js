@@ -15,6 +15,13 @@ export function getInfo (token) {
     params: { token }
   })
 }
+// 退出
+export function logout () {
+  return request({
+    url: '/user/logout',
+    method: 'post'
+  })
+}
 // 测试接口的使用
 export function test () {
   return request({
