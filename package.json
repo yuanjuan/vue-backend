@@ -2,7 +2,7 @@
   "name": "new-authenticate-pc",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "yuanjuan <yuanj@fadada.com>",
+  "author": "",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
