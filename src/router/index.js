@@ -58,6 +58,19 @@ export const constantRoutes = [{
     }
   ]
 }, {
+  path: '/multistep',
+  component: Layout,
+  name: 'Multistep',
+  meta: { title: '步骤条' },
+  children: [
+    {
+      path: '/multistep/index',
+      name: 'MultistepIndex',
+      component: () => import('@/views/multistep/index'),
+      meta: { title: '步骤条' }
+    }
+  ]
+}, {
   path: '/message',
   component: Layout,
   redirect: '/message/list',
@@ -74,6 +87,19 @@ export const constantRoutes = [{
       component: () => import('@/views/message/messageEdit.vue'),
       name: 'MessageEdit',
       meta: { title: '文章编辑' }
+    }
+  ]
+}, {
+  path: '/loading',
+  component: Layout,
+  name: 'Loading',
+  meta: { title: 'loading' },
+  children: [
+    {
+      path: '/loading/index',
+      name: 'LoadingIndex',
+      component: () => import('@/views/loading/index'),
+      meta: { title: 'loading' }
     }
   ]
 }, {
