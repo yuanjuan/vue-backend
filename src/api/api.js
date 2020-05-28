@@ -1,4 +1,5 @@
 import request from '@/utils/request'
+import Axios from 'axios'
 // 用户登录
 export function login (data) {
   return request({
@@ -28,4 +29,21 @@ export function test () {
     url: '/parameter/query',
     method: 'get'
   })
+}
+export function fetch (url, params) {
+  return new Promise((resolve, reject) => {
+    Axios.post(url, params)
+      .then(response => {
+        resolve(response.data)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
+}
+
+export default {
+  JH_news (url, params) {
+    return fetch(url, params)
+  }
 }

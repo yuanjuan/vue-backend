@@ -1,6 +1,7 @@
 <template>
   <div class="guide">
     <h2>引导页</h2>
+    <p>就是引导页的功能，没有做过</p>
   </div>
 </template>
 

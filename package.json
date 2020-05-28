@@ -2,7 +2,7 @@
   "name": "new-authenticate-pc",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "",
+  "author": "alisa",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "element-ui": "^2.13.0",
+    "express": "^4.17.1",
     "js-cookie": "^2.2.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",

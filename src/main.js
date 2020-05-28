@@ -10,6 +10,7 @@ import './styles/styles.less'
 import 'element-ui/lib/theme-chalk/index.css'
 
 require('./mock/index.js')
+require('./mock/list.js')
 
 import './permission'
 

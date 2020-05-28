@@ -46,5 +46,4 @@ Mock.setup({
 Mock.mock(/\/user\/login/, 'post', loginAPI.loginByUsername)
 Mock.mock(RegExp('/user/info'), 'get', loginAPI.getUserInfo)
 Mock.mock(/\/user\/logout/, 'post', loginAPI.logout)
-
 export default Mock
